@@ -40,7 +40,8 @@ The presence of a plus sign (`+`) before `xterm_clipboard` indicates support. Ad
 5. Also install `xclip` or `xsel` for X11 clipboard sharing.
 
 6. Open the editor with gvim -v (or vimx). In gvim, use the following command to copy to the system clipboard. Enjoy!
-```vimscript
+
+```vim
 " copy
 %y+ " (visual) (if nothing gets selected, copy all the text)
 "+y " (normal)
