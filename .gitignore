@@ -9,3 +9,5 @@ assets/*
 dev.txt
 .venv
 __pycache__
+*.log
+*.out

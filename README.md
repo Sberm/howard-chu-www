@@ -30,10 +30,10 @@ To generate new certificates for the docker build, just build the docker contain
 
 `assets` files are binary objects so they are ignored.
 
-automatic rebuild
+Automatic rebuild (using systemd for daemon management)
 ```
 python3 -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
-python auto_rebuild.py
+sh auto-build-setup.sh
 ```
+A service file `/etc/systemd/system/howard-chu-www.service` will be written, using `sudo systemctl stop howard-chu-www` to stop it, and `sudo systemctl status howard-chu-www` to check the running status.
