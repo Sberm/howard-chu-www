@@ -2,6 +2,10 @@
 
 Development
 ```bash
+# install gem, jekyll and bundler, and run bundle
+# sudo dnf install ruby ruby-devel openssl-devel redhat-rpm-config gcc-c++ @development-tools
+# gem install jekyll bundler
+# bundle
 sh dev.sh
 ```
 
