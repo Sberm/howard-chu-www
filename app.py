@@ -27,6 +27,16 @@ def print_webhook_info():
     )
     print(commit_info)
 
+def pull() -> bool:
+    subprocess.run(['git', 'pull'], capture_output=True)
+    stdout = output.stdout.decode('utf-8')
+    stderr = output.stderr.decode('utf-8')
+    if output.returncode == 0:
+        print('\x1b[32m', 'pull succeed\n', 'stdout:\n', stdout, '\n', 'stderr:\n', stderr, '\x1b[39m', sep='')
+    else:
+        print('\x1b[31m', 'fail to pull\n', 'stdout:\n', stdout, '\n', 'stderr:\n', stderr, '\x1b[39m', sep='')
+    return output.returncode == 0
+
 def build() -> bool:
     output = subprocess.run(['sh', 'deploy.sh'], capture_output=True)
     output = subprocess.run(['sh', 'deploy.sh'], capture_output=True)
@@ -41,6 +51,8 @@ def build() -> bool:
 @app.route('/howard-chu-www/postreceive', methods=['POST'])
 def receive_webhook():
     print_webhook_info()
+    if not pull():
+        return 'failed to pull', 400
     if not build():
         return 'failed to build', 400
     return 'build success', 200
