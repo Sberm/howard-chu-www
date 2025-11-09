@@ -7,12 +7,14 @@ RUN export GEM_HOME="$HOME/gems"
 RUN export PATH="$HOME/gems/bin:$PATH"
 RUN gem install jekyll bundler
 
-COPY _config.yml favicon.ico 404.html Gemfile Gemfile.lock index.markdown resume.markdown .
+COPY Gemfile Gemfile.lock .
+RUN bundle install
+
+COPY _config.yml favicon.ico 404.html index.markdown resume.markdown .
 COPY _posts _posts
 COPY _includes _includes
 COPY assets assets
 
-RUN bundle
 RUN bundle exec jekyll build
 
 COPY nginx.conf .
