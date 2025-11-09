@@ -1,10 +1,6 @@
 ---
 layout: post
-slug: "perf trace: Add support for enum arguments"
 title: "perf trace: Add support for enum arguments"
-authors: [howard]
-tags: [linux, perf, os]
-sidebar_position: -4
 ---
 `perf trace` now supports pretty printing for enum arguments
 

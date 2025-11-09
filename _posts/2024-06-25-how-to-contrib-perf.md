@@ -1,10 +1,6 @@
 ---
 layout: post
-slug: How to contribute to perf
 title: How to contribute to perf
-authors: [howard]
-tags: [linux, perf, os]
-sidebar_position: -5
 ---
 #### TL;DR:
 

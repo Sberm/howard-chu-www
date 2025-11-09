@@ -1,11 +1,6 @@
 ---
 layout: post
-slug: Launch Elixir app with mix
 title: Launch Elixir app with mix
-authors: [howard]
-tags: [linux]
-date: 2023-09-06
-sidebar_position: -2
 ---
 #### 0.5 define`main.ex`, use`mix run main.ex`(duplicates with 2.)
 main.ex:

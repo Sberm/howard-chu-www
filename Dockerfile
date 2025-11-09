@@ -15,7 +15,5 @@ COPY assets assets
 RUN bundle
 RUN bundle exec jekyll build
 
-# RUN mkdir -p /etc/letsencrypt/live/howard-chu.com
-
 COPY nginx.conf .
 CMD ["nginx", "-g", "daemon off;", "-c", "/usr/src/app/nginx.conf"]

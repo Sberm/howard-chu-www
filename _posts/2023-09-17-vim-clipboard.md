@@ -1,11 +1,6 @@
 ---
 layout: post
-slug: Shared vim clipboard when using SSH
 title: Shared vim clipboard when using SSH
-authors: [howard]
-tags: [linux]
-date: 2023-09-17
-sidebar_position: -3
 ---
 1. For Windows, download MobaXterm or Xming; for Mac, download XQuartz as the X server. After downloading, open the application.
 > Note that on Mac XQuartz works after I uncheck the `Enable Syncing`, and check it back again. [Link](https://stackoverflow.com/questions/47822357/how-to-use-x11-forwarding-to-copy-from-vim-to-local-machine)
