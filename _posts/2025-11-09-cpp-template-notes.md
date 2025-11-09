@@ -99,3 +99,5 @@ template <typename T> class BlobPtr {
 }
 ~~~
 we don't need to specify BlobPtr<T>&, cause compiler knows
+
+{% include comment_section.html %}
