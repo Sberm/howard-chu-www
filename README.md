@@ -26,9 +26,7 @@ Auto renewal
 echo "0 0,12 * * * root /opt/certbot/bin/python -c 'import random; import time; time.sleep(random.random() * 3600)' && sudo certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
 ```
 
-To generate new certificates for the docker build, just build the docker container again, the updated certificates will be copied to it.
-
-`assets` files are binary objects so they are ignored.
+`assets` files are binary objects so they are ignored in git.
 
 Automatic rebuild (using systemd for daemon management)
 ```
@@ -36,4 +34,4 @@ python3 -m venv .venv
 pip install -r requirements.txt
 sh auto-build-setup.sh
 ```
-A service file `/etc/systemd/system/howard-chu-www.service` will be written, using `sudo systemctl stop howard-chu-www` to stop it, and `sudo systemctl status howard-chu-www` to check the running status.
+A service file `/etc/systemd/system/howard-chu-www.service` will be written, use `sudo systemctl stop howard-chu-www` to stop it, and `sudo systemctl status howard-chu-www` to check the running status.
