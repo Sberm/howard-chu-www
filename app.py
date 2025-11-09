@@ -1,4 +1,4 @@
-# flask run --host 0.0.0.0 --port 5000
+# dev: .venv/bin/flask run --host 0.0.0.0 --port 5000
 from flask import Flask, request
 import json
 import hmac, hashlib
@@ -28,7 +28,7 @@ def print_webhook_info():
     print(commit_info)
 
 def pull() -> bool:
-    subprocess.run(['git', 'pull'], capture_output=True)
+    output = subprocess.run(['git', 'pull'], capture_output=True)
     stdout = output.stdout.decode('utf-8')
     stderr = output.stderr.decode('utf-8')
     if output.returncode == 0:
@@ -38,7 +38,6 @@ def pull() -> bool:
     return output.returncode == 0
 
 def build() -> bool:
-    output = subprocess.run(['sh', 'deploy.sh'], capture_output=True)
     output = subprocess.run(['sh', 'deploy.sh'], capture_output=True)
     stdout = output.stdout.decode('utf-8')
     stderr = output.stderr.decode('utf-8')

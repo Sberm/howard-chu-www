@@ -35,3 +35,8 @@ pip install -r requirements.txt
 sh auto-build-setup.sh
 ```
 A service file `/etc/systemd/system/howard-chu-www.service` will be written, use `sudo systemctl stop howard-chu-www` to stop it, and `sudo systemctl status howard-chu-www` to check the running status.
+
+Run auto-build for development
+```
+.venv/bin/flask run --host 0.0.0.0 --port 5000
+```
