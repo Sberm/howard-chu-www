@@ -29,3 +29,11 @@ echo "0 0,12 * * * root /opt/certbot/bin/python -c 'import random; import time; 
 To generate new certificates for the docker build, just build the docker container again, the updated certificates will be copied to it.
 
 `assets` files are binary objects so they are ignored.
+
+automatic rebuild
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python auto_rebuild.py
+```
