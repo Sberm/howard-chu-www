@@ -3,7 +3,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-assets/*
 .vscode
 .DS_Store
 dev.txt
@@ -11,3 +10,6 @@ dev.txt
 __pycache__
 *.log
 *.out
+
+assets/*
+!assets/.placeholder
