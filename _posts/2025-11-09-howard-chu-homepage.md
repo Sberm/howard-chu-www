@@ -31,4 +31,6 @@ sudo systemctl start howard-chu-www
 
 Now I don't need to worry about the remote server, if it builds on my local machine, after pushing to github, it will be served on my server.
 
+The Howard Chu Homepage project has been open sourced on [https://github.com/Sberm/howard-chu-www](https://github.com/Sberm/howard-chu-www.git)
+
 {% include comment_section.html %}
