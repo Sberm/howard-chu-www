@@ -10,8 +10,10 @@ RUN gem install jekyll bundler
 COPY Gemfile Gemfile.lock .
 RUN bundle install
 
-COPY _config.yml favicon.ico 404.html index.markdown resume.markdown .
+COPY _config.yml favicon.ico 404.html resume.markdown index.html archives.md about.md feed.xml robots.txt .
 COPY _posts _posts
+COPY _data _data
+COPY _layouts _layouts
 COPY _includes _includes
 COPY assets assets
 
