@@ -45,4 +45,4 @@ Run auto-build for development
 .venv/bin/flask run --host 0.0.0.0 --port 5000
 ```
 
-Put the resume in `assets/resume/` and name it to the according file name.
+Put the resume in `assets` and name it to the according file name.
