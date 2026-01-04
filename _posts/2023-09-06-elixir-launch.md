@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Launch Elixir app with mix
+excerpt_separator: <!-- truncate -->
 ---
 #### 0.5 define`main.ex`, use`mix run main.ex`(duplicates with 2.)
 main.ex:
@@ -10,8 +11,6 @@ defmodule Main do
   Server.main()
 end
 ```
-
-<!-- truncate -->
 
 server.ex:
 ```elixir
@@ -35,6 +34,8 @@ Generated server app
 ```
 
 #### 1. Use `iex -S mix` or `mix run -e`
+
+<!-- truncate -->
 
 define main function in Server module
 ```elixir

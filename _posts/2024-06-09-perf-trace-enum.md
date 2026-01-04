@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "perf trace: Add support for enum arguments"
+excerpt_separator: <!-- truncate -->
 ---
 `perf trace` now supports pretty printing for enum arguments
 

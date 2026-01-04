@@ -1,11 +1,13 @@
 ---
 layout: post
 title: Study notes on the C++ template
+excerpt_separator: <!-- truncate -->
 ---
 
 overload > specialization > general template
 
 specialization:
+
 ~~~cpp
 // special version of compare to handle pointers to character arrays
 template <>
@@ -27,6 +29,9 @@ struct ValidityError<core::Agent*> {
   enum { value = HSA_STATUS_ERROR_INVALID_AGENT };
 };
 ~~~
+
+<!-- truncate -->
+
 It is an error for a program to use a specialization and an instantiation of the original template with the same set of template arguments. However, it is an error that the compiler is unlikely to detect.
 
 Templates and their specializations should be declared in the same header file. Declarations for all the templates with a given name should appear first, followed by any specializations of those templates.

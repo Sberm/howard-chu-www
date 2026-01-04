@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using lldb to read C++ standard library
+excerpt_separator: <!-- truncate -->
 ---
 C++ standard library can be hard to read, using a debugger to help with learning can
 be a good approach.

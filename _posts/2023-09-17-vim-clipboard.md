@@ -7,7 +7,8 @@ title: Shared vim clipboard when using SSH
 > And tmux doesn't work well on Mac's default Terminal.app. For sharing clipboard you need to install [tmux-yank](https://github.com/tmux-plugins/tmux-yank) plugin
 2. In the server's SSH configuration file located at `/etc/ssh/sshd_config`, enable `X11Forwarding yes`.
 3. Based on personal experience, use the X server address provided in MobaXterm and set the Windows environment variable `$env:DISPLAY` to that address. This can be done in `Edit System Environment Variables`.
-```powershell
+
+```sh
 # configure
 PS C:\Users\Sberm> $env:DISPLAY="127.0.0.1:0.0"
 
@@ -15,13 +16,14 @@ PS C:\Users\Sberm> $env:DISPLAY="127.0.0.1:0.0"
 PS C:\Users\Sberm> echo $env:DISPLAY
 127.0.0.1:0.0
 ```
-<!-- truncate -->
+
 4. Use ssh -Y \<user\>@\<address\> for X forwarding (or ssh -X \<user\>@\<address\>; my Windows computer cannot use this).
 5. It is required to use a vim that supports X11. I'll use [Neovim](https://github.com/neovim/neovim) because it
    comes with everything, making the installation convenient. On CentOS, you
    can use gvim (on Ubuntu, it's called vim-gtk). They support X11
    clipboard functionality.
-```bash
+
+```sh
 # centos
 yum install vim-X11.x86_64
 
@@ -30,7 +32,8 @@ sudo apt-get install vim-gtk
 ```
 
 check if gvim supports X11(vim usually doesn't support by default)
-```bash
+
+```sh
 > gvim --version | grep clipboard
 +clipboard         +jumplist          +persistent_undo   +virtualedit
 -ebcdic            +mouseshape        +statusline        +xterm_clipboard

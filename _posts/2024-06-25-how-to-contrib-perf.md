@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to contribute to perf
+excerpt_separator: <!-- truncate -->
 ---
 #### TL;DR:
 
